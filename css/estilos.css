@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+body{
+	font-family: 'Oxygen', sans-serif;
+	font-size: 400;
+	height: 100%;
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+a{
+	list-style: none;
+    text-decoration: none;
+	color: darkorange;
+}
+.navbar a{
+	font-size: 25px;
+}
+#carrusel{
+	background: rgb(177,174,238);
+    background: linear-gradient(90deg, rgba(177,174,238,0.9248074229691877) 45%, rgba(175,220,244,0.927608543417367) 88%);
+	width: 100%;
+	height: 700px;
+	border: solid 3px rgb(215, 208, 208);
+    border-radius: 25px;
+}
+#carrusel .texto{
+	z-index: 2;
+}
+.titulosHome{
+	margin-left: 5px;
+	font-size: 3rem;
+}
+.destinosHome{
+	background-color: #fafafa;
+}
+#footer{
+	padding: 1em 0;
+	width: 100%;
+	height: 150px;
+	margin-top: auto;
+
+}
+
+/*Sección DESTINOS*/
+
+#carrusel2{
+	background: rgb(2,0,36);
+    background: linear-gradient(225deg, rgba(2,0,36,1) 0%, rgba(32,210,188,0.6530987394957983) 54%, rgba(0,212,255,1) 100%);
+	width: 100%;
+	height: 900px;
+	color: white;
+}
+#carrusel2 .texto{
+	z-index: 2;
+}
+.bg-gris{
+	background-color: rgba(215, 213, 214, 0.63);
+}
+/* Sección EXCURSIONES */
+
+#videoExcursion{
+	background: rgb(223,174,238);
+    background: radial-gradient(circle, rgba(223,174,238,0.9248074229691877) 0%, rgba(148,233,206,1) 100%);
+	width: 100%;
+	height: 900px;
+	color: white;
+}
+#videoExcursion .texto{
+	z-index: 2;
+}
+/*Sección PROMOCIONES*/
+
+.bg-celeste{
+	background-color: rgba(63, 146, 255, 0.27);
+}
+
+/*MEDIA QUERIE PANTALLA SM*/
+
+@media all and (max-width: 768px){
+	.titulosHome{
+		font-size: 2rem;
+}
+	.fila-excursion{
+		width: 100% !important;
+		text-align: center;
+	}
+	.wrap-element{
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
