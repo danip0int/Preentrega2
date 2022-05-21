@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <title>Desafio 6</title>
+    <title>Promociones</title>
   </head>
   <body>
+    <!----Comienza HEADER---->
     <div id="header" class="bg-secondary">
       <div class="container-xl bg-secondary">
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -35,26 +36,43 @@
                 </li>
                 </li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscador..." aria-label="Search">
-                <button class="btn btn-light text-dark btn-light-outline-dark" type="submit">Buscar</button>
-              </form>
-            </div>
           </div>
-        </nav>
+        </div>
+      </nav>
     </div>
   </div>
-  <div id="carrusel" class="d-flex align-items-center">
-      <span></span>
-    <div class="col-lg-7 mx-auto texto text-white text-center">
-      <div class="titulosHome">Carrusel de fotos</div>
+  <!----Finaliza HEADER---->
+
+  <!----Comienzo CARRUSEL---->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/prueba4.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/prueba.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/prueba2.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!----Finaliza CARRUSEL---->
+
+<!----Comienzo CONTENIDO PRINCIPAL---->
   <div class="col mt-3 texto text-center bg-gris"><h1>Conocé nuestras promociones</h1></div>
       <div class="container mt-4 bg-pack mb-3">
         <div class="titulosHome mb-3">Pack 1</div>
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="col-12 col-md-6 col-lg-4 mb-3 animacion-hover">
             <div class="card">
               <img src="assets/promo.jpg" alt="glaciar" class="card-img-top">
               <div class="card-body">
@@ -63,7 +81,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="col-12 col-md-6 col-lg-4 mb-3 animacion-hover">
             <div class="card">
               <img src="assets/promo.jpg" alt="glaciar" class="card-img-top">
               <div class="card-body">
@@ -72,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="col-12 col-md-6 col-lg-4 mb-3 animacion-hover">
             <div class="card">
               <img src="assets/promo.jpg" alt="glaciar" class="card-img-top">
               <div class="card-body">
@@ -82,7 +100,7 @@
             </div>
           </div>
           <div class="titulosHome mb-3">Pack 2</div>
-            <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="col-12 col-md-6 col-lg-4 mb-3 animacion-hover">
               <div class="card">
                 <img src="assets/promo.jpg" alt="glaciar" class="card-img-top">
                 <div class="card-body">
@@ -91,7 +109,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="col-12 col-md-6 col-lg-4 mb-3 animacion-hover">
               <div class="card">
                 <img src="assets/promo.jpg" alt="glaciar" class="card-img-top">
                 <div class="card-body">
@@ -100,7 +118,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="col-12 col-md-6 col-lg-4 mb-3 animacion-hover">
               <div class="card">
                 <img src="assets/promo.jpg" alt="glaciar" class="card-img-top">
                 <div class="card-body">
@@ -111,6 +129,7 @@
             </div>
           </div>
         </div>
+        <!----Finaliza CONTENIDO PRINCIPAL---->
         <div id="footer" class="bg-secondary">
           <div class="row">
             <div class="col-7 mx-auto texto text-white text-center">
