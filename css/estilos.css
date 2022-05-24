@@ -171,9 +171,11 @@ a{
 }
 .imgExcursion1 {
 	justify-content: start;
+	left: 150px;
 }
 .imgExcursion2 {
 	justify-content: end;
+	right: 150px;
 }
 .descripcionExc{
 	width: 20%;
@@ -259,5 +261,13 @@ a{
 	}
 	.mySlide .carousel-control-prev{
 		left: 20px;
+	}
+	.imgExcursion1 {
+		justify-content: center;
+		left: 0px;
+	}
+	.imgExcursion2 {
+		justify-content: center;
+		right: 0px;
 	}
 }
