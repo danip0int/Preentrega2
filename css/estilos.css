@@ -11,7 +11,6 @@ body{
 }
 
 /*Comienza HEADER*/
-
 .navbar ul{
     display: flex;
 
@@ -43,31 +42,97 @@ a{
     bottom: 0px;
     transition: 0.3s;
 }
-.nav-itema:hover{
+.nav-item a:hover{
     color: white;
 }
 .nav-item a:hover:after{
     width: 50%;
 }
-
 /*Finaliza HEADER*/
 
 /*Comienza pagina HOME*/
-
 .animacion-hover:hover{
 	transform: translateY(-10px);
 	box-shadow: 0px 0px 25px #666;
 	cursor: pointer;
 }
-.carousel-inner img {
-	height: 650px;
+.mySlide .carousel-item{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
 }
-.carousel.item{
-	position: relative;
-	background-position: center;
-	background-size: cover;
+.mySlide .carousel-item:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
 }
-
+.mySlide .carousel-item .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.mySlide .carousel-item h2{
+    font-size: 80px;
+    color: #ffffff;
+    margin: 0 0 10px;
+    opacity: 0;
+}
+.mySlide .carousel-item  p{
+    font-size: 30px;
+    margin: 0;
+    color: #eeeeee;
+    opacity: 0;
+}
+.mySlide .carousel-item.active h2{
+    animation: fadeInLeft 0.5s ease forwards;
+}
+.mySlide .carousel-item.active p{
+    animation: fadeInRight 0.5s ease forwards;
+}
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.mySlide .carousel-control-next,.mySlide .carousel-control-prev{
+    height: 60px;
+    width: 60px;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.mySlide .carousel-control-next{
+    right: 120px;
+}
+.mySlide .carousel-control-prev{
+    left: 120px;
+}
 .titulosHome{
 	display: flex;
 	z-index: 2;
@@ -82,36 +147,21 @@ a{
 	width: 100%;
 	height: 150px;
 	margin-top: auto;
-
 }
-
 /*Finaliza pagina HOME*/
 
+
 /*Comienza pagina DESTINOS*/
-.destinox{
-	position: relative;
-	background-position: center;
-	background-size: cover;
-}
 .tituloDestino{
 	font-size: 70px;
 }
-
-.carousel-caption{
-    top: 400px;
-    z-index: 2;
-}
-.carruselDestinos img{
-	height: 900px;
-}
-
 .bg-gris{
 	background-color: rgba(215, 213, 214, 0.63);
 }
 /*Finaliza pagina DESTINOS*/
 
-/*Comienza pagina EXCURSIONES*/
 
+/*Comienza pagina EXCURSIONES*/
 #videoExcursion{
 	background: rgb(223,174,238);
     background: radial-gradient(circle, rgba(223,174,238,0.9248074229691877) 0%, rgba(148,233,206,1) 100%);
@@ -121,54 +171,93 @@ a{
 }
 .imgExcursion1 {
 	justify-content: start;
-
 }
 .imgExcursion2 {
 	justify-content: end;
-
 }
 .descripcionExc{
 	width: 20%;
-	justify-content: start;
 }
 .tituloExcursion{
 	font-size: 70px;
 }
-
 /*Finaliza pagina EXCURSIONES*/
 
-/*Comienza pagina PROMOCIONES*/
 
+/*Comienza pagina PROMOCIONES*/
 .bg-celeste{
 	background-color: rgba(63, 146, 255, 0.27);
 }
-
 /*Finaliza pagina PROMOCIONES*/
+
 
 /*MEDIA QUERIE PANTALLA MD*/
 @media all and (max-width: 768px){
-	.wrap-element{
-		flex-wrap: wrap;
-		justify-content: center !important;
+	.mySlide .carousel-control-next,.mySlide .carousel-control-prev{
+		height: 30px!important;
+		width: 30px!important;
+		border-radius: 30%;
 	}
-}
-/*MEDIA QUERIE PANTALLA LG*/
-@media all and (max-width: 992px){
-	.descripcionExc{
-		width: 100%;
+    .mySlide .carousel-item h2{
+        font-size: 30px!important;
+    }
+    .mySlide .carousel-item p{
+        font-size: 15px;
+    }
+	.mySlide .carousel-control-next{
+		right: 10px!important;
 	}
-	.wrap-element{
-		flex-wrap: wrap;
-		justify-content: center !important;
+	.mySlide .carousel-control-prev{
+		left: 10px!important;
 	}
-}
-/*MEDIA QUERIE PANTALLA XL*/
-@media all and (max-width: 1200px){
-	.descripcionExc{
-		width: 100%;
-	}
-	.wrap-element{
-		justify-content: center !important;
+	.titulosHome{
+		font-size: 2rem;
 	}
 }
 
+/*MEDIA QUERIE PANTALLA LG*/
+
+@media all and (max-width: 992px){
+	.mySlide .carousel-control-next,.mySlide .carousel-control-prev{
+		height: 40px;
+		width: 40px;
+		border-radius: 30%;
+	}
+	.mySlide .carousel-item h2{
+		font-size: 40px;
+	}
+	.mySlide .carousel-item p{
+		font-size: 19px;
+	}
+	.mySlide .carousel-control-next{
+		right: 20px;
+	}
+	.mySlide .carousel-control-prev{
+		left: 20px;
+	}
+	.titulosHome{
+		font-size: 2rem;
+	}
+}
+
+/*MEDIA QUERIE PANTALLA XL*/
+
+@media all and (max-width: 1200px){
+	.mySlide .carousel-control-next,.mySlide .carousel-control-prev{
+		height: 50px;
+		width: 50px;
+		border-radius: 40%;
+	}
+	.mySlide .carousel-item h2{
+		font-size: 50px;
+	}
+	.mySlide .carousel-item p{
+		font-size: 19px;
+	}
+	.mySlide .carousel-control-next{
+		right: 20px;
+	}
+	.mySlide .carousel-control-prev{
+		left: 20px;
+	}
+}
