@@ -15,7 +15,7 @@ body{
     display: flex;
 
 }
-#navbarSupportedContent{
+.navbar-nav{
 	position: absolute;
 	right: 0px;
 	bottom: 5px;
@@ -239,6 +239,13 @@ a{
 	}
 	.titulosHome{
 		font-size: 2rem;
+	}
+	.navbar-nav{
+		position: relative;
+		text-align: center;
+		justify-content: center;
+		right: 0px;
+		bottom: 5px;
 	}
 }
 
